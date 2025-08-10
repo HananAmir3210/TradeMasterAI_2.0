@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center pt-8 px-4 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-16 sm:pt-8 px-4 overflow-hidden">
       <div className="max-w-8xl mx-auto container-padding text-center flex flex-col justify-center h-full">
         <div className="animate-fade-in space-y-8">
           {/* Badge */}
@@ -16,13 +16,13 @@ const HeroSection = () => {
 
           {/* Main Headline */}
           <div className="space-y-6">
-            <h1 className="headline-text text-3xl md:text-5xl lg:text-6xl leading-tight">
+            <h1 className="headline-text text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight">
               <span className="text-white">AI-Powered</span>
               <br />
               <span className="gradient-text">Trading Intelligence</span>
             </h1>
             {/* Subheadline */}
-            <p className="subheadline-text max-w-2xl mx-auto text-base md:text-lg">
+            <p className="subheadline-text max-w-2xl mx-auto text-sm sm:text-base md:text-lg lg:text-xl">
               Advanced analytics and machine learning transform your trading decisions. 
               Professional-grade insights for the modern trader.
             </p>
@@ -49,7 +49,7 @@ const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto pt-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-2xl mx-auto pt-6">
             <div className="flex flex-col items-center gap-2">
               <BarChart3 className="w-5 h-5 text-white/40" />
               <div className="text-center">

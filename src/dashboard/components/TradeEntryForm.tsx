@@ -366,7 +366,7 @@ export default function TradeEntryForm({ onTradeAdded, editingTrade, onTradeUpda
                   value={formData.title}
                   onChange={(e) => handleInputChange('title', e.target.value)}
                   placeholder="e.g., EUR/USD Breakout Strategy"
-                  className="bg-input border-border"
+                  className="bg-input border-border h-10 sm:h-12 text-sm sm:text-base"
                 />
               </div>
 
@@ -547,7 +547,7 @@ export default function TradeEntryForm({ onTradeAdded, editingTrade, onTradeUpda
                   onChange={(e) => handleInputChange('notes', e.target.value)}
                   placeholder="Describe your trade setup, analysis, and reasoning..."
                   rows={4}
-                  className="bg-input border-border resize-none"
+                  className="bg-input border-border resize-none text-sm sm:text-base min-h-[100px] sm:min-h-[120px]"
                 />
               </div>
             </CardContent>

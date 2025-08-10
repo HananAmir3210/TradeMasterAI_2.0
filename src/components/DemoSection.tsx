@@ -28,7 +28,7 @@ const DemoSection = () => {
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } }
             }}
-            className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-white"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-tight text-white"
           >
             See <span className="gradient-text">TradeMaster AI</span> in Action
           </motion.h2>
@@ -65,7 +65,7 @@ const DemoSection = () => {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="relative mb-10 animate-scale-in flex justify-center"
         >
-          <div className="premium-card rounded-2xl p-2 premium-hover max-w-screen-md w-full mx-auto aspect-video flex items-center justify-center relative overflow-hidden">
+          <div className="premium-card rounded-xl sm:rounded-2xl p-1 sm:p-2 premium-hover max-w-screen-md w-full mx-auto aspect-video flex items-center justify-center relative overflow-hidden">
             <div className="relative w-full h-full rounded-xl overflow-hidden flex items-center justify-center aspect-video">
               <img 
                 src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&h=800&fit=crop"

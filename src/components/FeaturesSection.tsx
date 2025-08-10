@@ -61,7 +61,7 @@ const FeaturesSection = () => {
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } }
             }}
-            className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-white"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-tight text-white"
           >
             Features Built for <span className="bg-gradient-to-r from-[#00C896] via-[#00BFFF] to-[#00FFAA] bg-clip-text text-transparent">Excellence</span>
           </motion.h2>
@@ -84,7 +84,7 @@ const FeaturesSection = () => {
             hidden: {},
             visible: { transition: { staggerChildren: 0.10 } }
           }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
         >
           {features.map((feature, index) => (
             <motion.div
@@ -93,7 +93,7 @@ const FeaturesSection = () => {
                 hidden: { opacity: 0, y: 40 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } }
               }}
-              className="group premium-card features-glow rounded-2xl p-5 premium-hover animate-scale-in relative overflow-hidden"
+              className="group premium-card features-glow rounded-xl sm:rounded-2xl p-4 sm:p-5 premium-hover animate-scale-in relative overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="mb-4 p-2 rounded-xl w-fit group-hover:bg-[#00C896]/10 transition-colors duration-300 bg-[#00BFFF]/10">

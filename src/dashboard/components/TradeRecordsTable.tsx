@@ -105,10 +105,10 @@ export default function TradeRecordsTable({
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'open': return { variant: 'secondary', color: 'text-secondary' };
-      case 'closed': return { variant: 'primary', color: 'text-primary' };
-      case 'cancelled': return { variant: 'destructive', color: 'text-destructive' };
-      default: return { variant: 'muted', color: 'text-muted-foreground' };
+      case 'open': return { variant: 'secondary' as const, color: 'text-secondary' };
+      case 'closed': return { variant: 'default' as const, color: 'text-primary' };
+      case 'cancelled': return { variant: 'destructive' as const, color: 'text-destructive' };
+      default: return { variant: 'outline' as const, color: 'text-muted-foreground' };
     }
   };
 
@@ -148,7 +148,7 @@ export default function TradeRecordsTable({
       </div>
 
       {/* Stats Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 animate-reveal animate-reveal-delay-1">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-4 animate-reveal animate-reveal-delay-1">
         <Card className="glass-card">
           <CardContent className="p-4">
             <div className="flex items-center justify-between">

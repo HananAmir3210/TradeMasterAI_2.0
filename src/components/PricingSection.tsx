@@ -78,7 +78,7 @@ const PricingSection = () => {
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } }
             }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
           >
             Choose Your <span className="gradient-text">Trading Edge</span>
           </motion.h2>
@@ -112,7 +112,7 @@ const PricingSection = () => {
             hidden: {},
             visible: { transition: { staggerChildren: 0.10 } }
           }}
-          className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 max-w-5xl mx-auto"
         >
           {plans.map((plan, index) => (
             <motion.div
@@ -121,9 +121,9 @@ const PricingSection = () => {
                 hidden: { opacity: 0, y: 40 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } }
               }}
-              className={`relative bg-dark-card rounded-3xl p-5 border transition-all duration-300 animate-scale-in ${
+              className={`relative bg-dark-card rounded-2xl sm:rounded-3xl p-4 sm:p-5 border transition-all duration-300 animate-scale-in ${
                 plan.popular 
-                  ? 'border-primary glow-effect transform scale-105' 
+                  ? 'border-primary glow-effect sm:transform sm:scale-105' 
                   : 'border-gray-800 hover:border-primary/50'
               } overflow-hidden`}
               style={{ animationDelay: `${index * 0.1}s` }}

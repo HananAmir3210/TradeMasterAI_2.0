@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useScrollToTop } from "./hooks/use-scroll-to-top";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
@@ -23,8 +23,11 @@ import TermsOfService from "./pages/TermsOfService";
 import CookiePolicy from "./pages/CookiePolicy";
 import GDPR from "./pages/GDPR";
 import DashboardWrapper from "./dashboard/DashboardWrapper";
+import AdminApp from "./components/AdminApp";
 
 const queryClient = new QueryClient();
+
+
 
 const AppRoutes = () => {
   useScrollToTop();
@@ -49,6 +52,8 @@ const AppRoutes = () => {
       <Route path="/cookie-policy" element={<CookiePolicy />} />
       <Route path="/gdpr" element={<GDPR />} />
       <Route path="/dashboard/*" element={<DashboardWrapper />} />
+      {/* Admin Panel - Integrated directly into main app */}
+      <Route path="/admin/*" element={<AdminApp />} />
       {/* Catch-all 404 route */}
       <Route path="*" element={<NotFound />} />
     </Routes>
@@ -60,7 +65,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-        <AppRoutes />
+      <AppRoutes />
     </TooltipProvider>
   </QueryClientProvider>
 );

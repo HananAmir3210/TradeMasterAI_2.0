@@ -9,7 +9,8 @@ import {
   Calendar,
   Zap,
   Award,
-  Activity
+  Activity,
+  Plus
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -150,6 +151,74 @@ export default function DashboardHome({ trades, userName, className }: Dashboard
       </CardContent>
     </Card>
   );
+
+  // Show onboarding message if no trades exist
+  if (trades.length === 0) {
+    return (
+      <div className={`space-y-6 sm:space-y-8 ${className}`}>
+        {/* Welcome Section */}
+        <div className="animate-reveal">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-2">
+            Welcome to TradeMaster AI, {displayName} 👋
+          </h1>
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg">
+            Start your trading journey by logging your first trade
+          </p>
+        </div>
+
+        {/* Onboarding Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+          <Card className="glass-card animate-reveal animate-reveal-delay-1">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Plus className="h-5 w-5 text-primary" />
+                Get Started
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground">
+                Welcome to TradeMaster AI! To get started, log your first trade and begin tracking your performance.
+              </p>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-sm">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <span>Log your trades with detailed analysis</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <span>Get AI-powered insights and feedback</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <span>Track your performance over time</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="glass-card animate-reveal animate-reveal-delay-2">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Brain className="h-5 w-5 text-primary" />
+                AI Features
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground">
+                Our AI will analyze your trades and provide personalized insights to improve your trading performance.
+              </p>
+              <div className="bg-primary/10 border border-primary/20 rounded-lg p-4">
+                <p className="text-sm font-medium text-primary mb-2">💡 Pro Tip</p>
+                <p className="text-sm text-muted-foreground">
+                  Upload chart screenshots with your trades for more detailed AI analysis and better insights.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={`space-y-6 sm:space-y-8 ${className}`}>
